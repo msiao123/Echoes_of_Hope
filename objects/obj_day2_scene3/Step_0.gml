@@ -277,8 +277,20 @@ switch (global.cutscene_id) {
                     cutscene_step = 19;
                 }
                 break;
+				
+			case 19:
+				if (!dialogue_visible) {
+					dialogue_speaker = "Narration";
+                    current_dialogue = "The next day...";
+                    dialogue_visible = true;
+                } 
+                else if (keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {     
+					dialogue_visible = false;
+                    cutscene_step = 20;
+                }
+                break;
                       
-            case 19:
+            case 20:
                 if (!dialogue_visible) {
                     global.cutscene_id = 6;
                     global.cutscene_active = true;

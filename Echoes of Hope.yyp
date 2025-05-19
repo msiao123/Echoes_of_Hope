@@ -68,6 +68,7 @@
     {"id":{"name":"obj_MenuSound","path":"objects/obj_MenuSound/obj_MenuSound.yy",},},
     {"id":{"name":"obj_mother","path":"objects/obj_mother/obj_mother.yy",},},
     {"id":{"name":"obj_teacher","path":"objects/obj_teacher/obj_teacher.yy",},},
+    {"id":{"name":"black_screen","path":"rooms/black_screen/black_screen.yy",},},
     {"id":{"name":"ending","path":"rooms/ending/ending.yy",},},
     {"id":{"name":"house_day1_scene1_1","path":"rooms/house_day1_scene1_1/house_day1_scene1_1.yy",},},
     {"id":{"name":"house_day1_scene1","path":"rooms/house_day1_scene1/house_day1_scene1.yy",},},
@@ -94,6 +95,7 @@
     {"id":{"name":"school","path":"rooms/school/school.yy",},},
     {"id":{"name":"reset_typewriter","path":"scripts/reset_typewriter/reset_typewriter.yy",},},
     {"id":{"name":"snd_menu_music","path":"sounds/snd_menu_music/snd_menu_music.yy",},},
+    {"id":{"name":"snd_type","path":"sounds/snd_type/snd_type.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_casey_idle","path":"sprites/spr_casey_idle/spr_casey_idle.yy",},},
     {"id":{"name":"spr_classmateB_Idle","path":"sprites/spr_classmateB_Idle/spr_classmateB_Idle.yy",},},
@@ -138,6 +140,7 @@
     {"roomId":{"name":"school_day1_scene1","path":"rooms/school_day1_scene1/school_day1_scene1.yy",},},
     {"roomId":{"name":"school_day3_scene2_2","path":"rooms/school_day3_scene2_2/school_day3_scene2_2.yy",},},
     {"roomId":{"name":"school_day3_scene2_1","path":"rooms/school_day3_scene2_1/school_day3_scene2_1.yy",},},
+    {"roomId":{"name":"black_screen","path":"rooms/black_screen/black_screen.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

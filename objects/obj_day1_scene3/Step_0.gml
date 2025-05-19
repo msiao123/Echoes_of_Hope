@@ -116,7 +116,20 @@ switch (global.cutscene_id) {
                     dialogue_speaker = "Inner Thought";
                     current_dialogue = "The quiet isn’t peaceful, it’s just quiet. No yelling, no harsh words. But the space still feels heavy.";
                     dialogue_visible = true;
+					reset_typewriter();
                 } 
+                else if (keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
+                    dialogue_visible = false;
+                    cutscene_step = 7;
+                }
+                break;
+
+            case 7:
+                if (!dialogue_visible) {
+                    dialogue_speaker = "Narration";
+                    current_dialogue = "The next day...";
+                    dialogue_visible = true;
+                }
                 else if (keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
                     global.cutscene_id = 3;
                     global.cutscene_active = true;
