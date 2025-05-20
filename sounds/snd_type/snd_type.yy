@@ -7,9 +7,9 @@
   },
   "bitDepth":1,
   "bitRate":128,
-  "compression":3,
+  "compression":0,
   "conversionMode":0,
-  "duration":0.10002267,
+  "duration":0.12283447,
   "name":"snd_type",
   "parent":{
     "name":"Sounds",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_type.ogg",
   "type":0,
-  "volume":0.5,
+  "volume":0.3,
 }

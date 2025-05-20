@@ -11,6 +11,13 @@ switch (global.cutscene_id) {
                 if (typewriter_index < string_length(current_dialogue)) {
                     typewriter_index += 1;
                     displayed_text = string_copy(current_dialogue, 1, typewriter_index);
+
+                    // 🔊 Added: Typing sound for visible characters
+                    var char = string_char_at(current_dialogue, typewriter_index);
+                    if (char != " ") {
+                        audio_play_sound(snd_type, 0, false);
+						audio_sound_pitch(snd_type, random_range(0.9, 0.95));
+                    }
                 }
             }
         } else {
@@ -101,7 +108,7 @@ switch (global.cutscene_id) {
                 else if (keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
                     cutscene_step = 2;
                     dialogue_visible = false;
-					room_goto(house_day1_scene1_1);
+                    room_goto(house_day1_scene1_1);
                 }
                 break;
 
@@ -176,8 +183,8 @@ switch (global.cutscene_id) {
                 else if (keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
                     global.cutscene_id = 1;
                     global.cutscene_active = true;
-					dialogue_visible = false;
-					reset_typewriter();
+                    dialogue_visible = false;
+                    reset_typewriter();
                     room_goto(school_day1_scene1);
                 }
                 break;

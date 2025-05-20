@@ -1,16 +1,23 @@
 switch (global.cutscene_id) {
     case 9: // Scene: Evening Echoes
         if (fade_alpha > 0) fade_alpha -= 0.02;
-       
+
         if (dialogue_visible) {
             typewriter_counter += 1;
-                if (typewriter_counter >= typewriter_speed) {
-                    typewriter_counter = 0;
-                    if (typewriter_index < string_length(current_dialogue)) {
-                        typewriter_index += 1;
-                        displayed_text = string_copy(current_dialogue, 1, typewriter_index);
+            if (typewriter_counter >= typewriter_speed) {
+                typewriter_counter = 0;
+                if (typewriter_index < string_length(current_dialogue)) {
+                    typewriter_index += 1;
+                    displayed_text = string_copy(current_dialogue, 1, typewriter_index);
+
+                    // 🔊 Added: Typing sound for visible characters
+                    var char = string_char_at(current_dialogue, typewriter_index);
+                    if (char != " ") {
+                        audio_play_sound(snd_type, 0, false);
+						audio_sound_pitch(snd_type, random_range(0.9, 0.95));
                     }
-                }            
+                }
+            }
         } else {
             typewriter_index = 0;
             displayed_text = "";
